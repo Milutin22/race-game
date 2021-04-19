@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial Bold, sans-serif;
+    color: #ffffff;
+}
+
+body {
+    background-color: #5BC0BE;
+}
+
+#track {
+    background-color: #FF5964;
+    width: 1225px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#track::before {
+    content: 'PLAYER 1';
+    position: absolute;
+    top: -60px;
+    left: 35vw;
+    color: #ffffff;
+    font-size: 35px;
+    font-family: Arial Bold, sans-serif;
+}
+
+#track::after {
+    content: 'PLAYER 2';
+    position: absolute;
+    top: 422px;
+    left: 35vw;
+    color: #ffffff;
+    font-size: 35px;
+    font-family: Arial Bold, sans-serif;
+}
+
+main div div:nth-of-type(1), main div div:nth-of-type(2) {
+    height: 60%;
+    width: 200px;
+    left: 56px;
+    background-size: 650px;
+    position: absolute;
+    background-repeat: no-repeat
+}
+#player1 {   
+    background-image: url(../images/player1.png);
+    top: -37px;
+}
+#player2 {
+    background-image: url(../images/player2.png);
+    top: 179px;
+}
+
+#start {
+    width: 10%;
+    height: 100%;
+    border-right: 15px solid #ffffff;
+    display: inline-block;
+    background-color: #2E5077;
+    background-image: url('../images/start.png');
+    background-size: cover;
+    background-position-x: center;
+}
+
+#line {
+    width: 80%;
+    height: 206px;
+    border-top: 12px solid #ffffff;
+    display: inline-block;
+}
+
+#finish {
+    width: 10%;
+    height: 100%;
+    border-left: 15px solid #ffffff;
+    display: inline-block;
+    background-color: #2E5077;
+    background-image: url('../images/finish.png');
+    background-size: cover;
+    background-position-x: center;
+}
+
+
+body > div {
+    position: relative;
+    width: 200px;
+    left: 26vw;
+}
+body > div:nth-of-type(1) {
+    top: 15vh;
+}
+body > div:nth-of-type(2) {
+    top: 75vh;
+}
+h1 {
+    display: inline-block;
+}
+.key {
+    height: 60px;
+    width: 59px;
+    margin-left: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;   
+    top: -10px;
+    background-position-x: -1px;
+}
+
+body > div:nth-of-type(1) > .key {
+    background-image: url(../images/keyD.png);
+   /* background-position-x: -62px;*/
+}
+
+body > div:nth-of-type(2) > .key {
+    background-image: url(../images/keyL.png);
+}
+
+#sound {
+    font-size: 30px;
+    left: 93vw;
+    top: -40px;
+    width: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#reset {
+    font-size: 30px;
+    left: 87.5vw;
+    top: -40px;
+    width: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------------*/
+                  /*classes for toggle*/
+/*--------------------------------------------------------*/
+
+
+.position {
+    background-position-x: -62px;
+}
+
+
+/*--------------------------------------------------------*/
+                  /*responsive for bigger and smaller desktop displays*/
+/*--------------------------------------------------------*/
+
+@media (max-width: 1550px) {
+    body > div {
+        left: 18vw;
+    }
+}
